@@ -4,6 +4,7 @@
 <title>오'키친</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="manifest" href="manifest.json">
 <link rel="shortcut icon" href="images/favicon.ico">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;600&display=swap">
@@ -12,6 +13,17 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
+<script type="module">
+if("serviceWorker" in navigator){
+	navigator.serviceWorker.register("/pwa1/pwabuilder-sw.js")
+	.then(function(registration){
+		// console.log("Service Worker Success", registration);
+	})
+	.catch(function(error){
+		// console.error("Service Worker Fail", error);
+	});
+}
+</script>
 </head>
 
 <body>
